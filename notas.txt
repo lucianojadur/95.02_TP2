@@ -1,0 +1,9 @@
+Ver tema de implementación de turnos 
+	1. Atacar + reagrupar
+	2. Reagrupar
+
+Mover diceAmount() a una clase que corresponda (Actualmente en Country)
+	mejor que country informe cuántos ejercitos tiene y quien reciba ese mensaje
+	se encargue de calcular cuántos dados tirar como máximo.
+
+Reemplazar String x Country (salvo en las claves del diccionario dentro de Map)
