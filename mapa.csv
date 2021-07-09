@@ -1,0 +1,50 @@
+Argentina,Uruguay,Brasil,Peru,Chile
+Brasil,Argentina,Colombia,Peru,Sahara,Uruguay
+Chile,Argentina,Avstralia,Peru
+Colombia,Brasil,Mexico,Peru
+Peru,Argentina,Brasil,Chile,Colombia
+Uruguay,Argentina,Brasil
+Avstralia,Borneo,Chile,Java,Svmatra
+Borneo,Avstralia,Malasia
+Java,Avstralia
+Svmatra,Avstralia,India
+Arabia,Israel,Tvrqvia
+Aral,Iran,Rvsia,Siberia,Tartaria
+China,Gobi,India,Iran,Japon,Kamchatka,Malasia,Mongolia,Siberia
+Gobi,China,Iran,Mongolia
+India,China,Iran,Malasia,Svmatra
+Iran,Aral,Gobi,Mongolia,Rvsia,Tvrqvia
+Israel,Arabia,Egipto,Tvrqvia
+Japon,China,Kamchatka
+Kamchatka,Alaska,China,Japon,Siberia
+Malasia,Borneo,China,India
+Mongolia,Aral,China,Gobi,Iran,Siberia
+Siberia,Aral,China,Kamchatka,Mongolia,Tartaria,Taymir
+Tartaria,Aral,Siberia,Taymir
+Taymir,Siberia,Tartaria
+Tvrqvia,Arabia,Egipto,Iran,Israel,Polonia,Rvsia
+Alemania,Francia,Gran Bretaña,Italia,Polonia
+España,Francia,Gran Bretaña,Sahara
+Francia,ALemania,España,Italia
+Gran Bretaña,Alemania,España,Islandia
+Islandia,Gran Bretaña,Groenlandia,Svecia
+Italia,Alemania,Francia
+Polonia,Alemania,Egipto,Rvsia,Tvrqvia
+Rvsia,Aral,Iran,Polonia,Svecia,Tvrqvia
+Svecia,Islandia,Rvsia
+Egipto,Etiopia,Israel,Madagascar,Polonia,Sahara,Tvrqvia
+Etiopia,Egipto,Sahara,Svdafrica,Zaire
+Madagascar,Egipto,Zaire
+Sahara,Brasil,Egipto,España,Etiopia,Zaire
+Svdafrica,Etiopia,Zaire
+Zaire,Etiopia,Madagascar,Sahara,Svdafrica
+Alaska,Kamchatka,Oregon,Yvkon
+California,Mexico,Nueva York,Oregon
+Canada,Nueva York,Oregon,Terranova,Yvkon
+Groenlandia,Islandia,Labrador,Nueva York
+Labrador,Groenlandia,Terranova
+Mexico,California,Colombia
+Nueva York,California,Canada,Groenlandia,Oregon,Terranova
+Oregon,Alaska,California,Canada,Nueva York,Yvkon
+Terranova,Canada,Labrador,Nueva York
+Yvkon,Alaska,Canada,Oregon
