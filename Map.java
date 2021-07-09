@@ -16,7 +16,6 @@ public class Map{
 	public static Map map;
 	private ArrayList<Country> countries;
 	private HashMap<String, ArrayList<Country>> borderings;
-	private int armiesAmount;
 
 	private Map(String path){
 		ParserMap parsed = ParserMap.getParsedFile(path);
@@ -29,6 +28,19 @@ public class Map{
 		if (Map.map == null)
 			map = new Map(path);
 		return map;
+	}
+
+	//Given 2 Countries, returns true if b belongs to the list of a's bordering.
+	public boolean areBordering(Country a, Country b){
+		return borderings.get(a.getName()).contains(b);
+	}
+
+	//Returns a counrtry if its name matches the string given as parameter.
+	public Country get(String name){
+		for(Country c : countries)
+			if (c.getName().equals(name))
+				return c;
+		return null;
 	}
 
 

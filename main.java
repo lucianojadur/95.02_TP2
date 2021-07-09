@@ -14,5 +14,10 @@ public class main{
 	public static void main(String[] argv){
 		Map map = Map.create("./mapa.csv");
 		map.printBorderings();
-	}
+		System.out.println("\n");
+		Country a = map.get("Argentina");
+		Country b = map.get("Brasil");
+		if (map.areBordering(a, b))
+			System.out.println(a.getName() + " y " + b.getName() + " son limítrofes");
+	} 
 }
