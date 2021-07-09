@@ -1,5 +1,5 @@
 # 95.02_TP2
-Trabajo Práctico 2  de Algorimos y Programación III - FIUBA
+Trabajo Práctico 2  de Algoritmos y Programación III - FIUBA
 
 Nota: x ahora sólo copié tal cual está en el original la clase Country para chequear que el parseo y la creación del mapa sea correcta. 
 No lo modifiqué, por lo que tanto el mapa como el parser deberían ser compatibles con lo que hay escrito hasta ahora.
