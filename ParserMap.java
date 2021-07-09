@@ -3,13 +3,14 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileReader;
-//import Country;
+
 
 public class ParserMap{
-	
+//Attributes
 	private ArrayList<Country> listOfCountries;
 	private HashMap<String, ArrayList<Country>> map;
 
+//Metods	
 	private ParserMap(){
 		listOfCountries = new ArrayList<Country>();
 		map = new HashMap<String, ArrayList<Country>>();
@@ -21,6 +22,7 @@ public class ParserMap{
 		return map;	
 	}
 
+  //getters
 	public HashMap<String, ArrayList<Country>> dict(){
 		return map;
 	}
@@ -29,6 +31,15 @@ public class ParserMap{
 		return listOfCountries;
 	}
 
+/*
+ * Estos 2 métodos de acá abajo funcionan bien pero para correr todo desde una
+ * instancia de Map (que es la idea, Parser no existe en el juego después de
+ * finalizar el setup) directamente pasé el más importante para ahí.
+ *
+ * Igual los dejo por si quieren probar que la lista de países también se cree
+ * correctamente.
+ *
+ *
 	public void printList(){
 		for (Country c : listOfCountries)
 			System.out.print(c.getName() + " ");
@@ -37,18 +48,24 @@ public class ParserMap{
 
 	public void printMap(){
 		for(String key : map.keySet()){
-		//	for(ArrayList<Country> l : map.get(key))
 			System.out.print(key + ": "); 	
 			for(Country c : map.get(key))
 					System.out.print(c.getName() + " ");
 			System.out.println(" ");
 		}
 	}
-	
+*
+*/
+
+	//Parser. While reading a csv file opened from <path>, creates and appends
+	//to the list each new Country inside the file by comparing their names
+	//(file vs list).
+	//When it reaches the end of each line, adds a new key-value pair to the
+	//dictionary (every value contains a list of references to Countries from
+	//listOfCountries, so no one is created twice or more)
 	private void getListAndMapFrom(String path){
 		BufferedReader reader = null;
 		String line = "";
-		//Se define separador ","
 		String delim = ",";
 
 		try {
@@ -72,20 +89,26 @@ public class ParserMap{
 				//Agrego los strings como claves (no paises).
 				map.putIfAbsent(key,borderings);
 			}
-		} catch (Exception e) {
+		} catch (Exception e) {	
+			System.out.println("Ocurrió un error al procesar el archivo: " + path);
+			System.out.println("Error: " + e);
 		}	
 	}
 
+
+	//Adds to listOfCountries each new Country whose name is in <names>
+	//(an array of Strings)
 	private void getCountriesFrom(String[] names){
 		for(String name : names){
 			if(!isInList(name)){
 				Country c =  new Country(name);
 				listOfCountries.add(c);
-
 			}
 		}
 	}
 	
+	//Looks for and returns a Country in listOfCountries given its name as String.
+	//If not found retruns null
 	private Country getByName(String name){
 		for (Country c : listOfCountries)
 			if(c.getName().equals(name))
@@ -93,10 +116,11 @@ public class ParserMap{
 		return null;
 	}
 
+	//Linear search of a Country given its name as a String.
 	private boolean isInList(String name){
-			for(Country c : listOfCountries)	
-				if (c.getName().equals(name))
-					return true;
+		for(Country c : listOfCountries)	
+			if (c.getName().equals(name))
+				return true;
 		return false;
 	}	
 
